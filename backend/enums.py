@@ -1,15 +1,29 @@
 from enum import Enum
 
-class OrderSide(str, Enum):
-    BUY = "buy"
-    SELL = "sell"
 
-class OrderType(str, Enum):
-    MARKET = "market"
-    LIMIT = "limit"
+class TransactionType(str, Enum):
+    """Type of transaction"""
+    INCOME = "income"
+    EXPENSE = "expense"
 
-class OrderStatus(str, Enum):
-    OPEN = "open"
-    PARTIALLY_FILLED = "partially_filled"
-    FILLED = "filled"
-    CANCELED = "canceled"
+
+class BudgetPeriod(str, Enum):
+    """Budget time period"""
+    WEEKLY = "weekly"
+    MONTHLY = "monthly"
+    YEARLY = "yearly"
+
+
+class RecurrenceFrequency(str, Enum):
+    """Frequency for recurring transactions"""
+    DAILY = "daily"
+    WEEKLY = "weekly"
+    MONTHLY = "monthly"
+    YEARLY = "yearly"
+
+
+class ExportFormat(str, Enum):
+    """Export file formats"""
+    CSV = "csv"
+    JSON = "json"
+    PDF = "pdf"
