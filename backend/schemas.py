@@ -35,6 +35,10 @@ class UserResponse(UserBase):
     # as a dictionary so it can populate these fields.
     model_config = _pydantic.ConfigDict(from_attributes=True)
 
+class TokenResponse(_pydantic.BaseModel):
+    access_token: str
+    token_type: str
+
 # ============================================================================
 # Category Schemas
 # ============================================================================
